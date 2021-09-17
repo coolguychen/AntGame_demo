@@ -1,4 +1,4 @@
-public class stick {
+public class Stick {
     int length;
 
     //getter and setter
@@ -13,5 +13,6 @@ public class stick {
     //判断是否蚂蚁是否会掉下去
     boolean isOut(Ant ant){
         //todo
+        return true;
     }
 }
