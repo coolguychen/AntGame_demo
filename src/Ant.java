@@ -1,8 +1,15 @@
 public class Ant {
     int id;
-    int velocity;
-    int location;
-    int hit;
+    double velocity;
+    double location;
+    int hit = 0;
+
+    //constructor
+    public Ant(int id, int velocity, int location) {
+        this.id = id;
+        this.velocity = velocity;
+        this.location = location;
+    }
 
     //setter and getter
     public int getId() {
@@ -13,7 +20,7 @@ public class Ant {
         this.id = id;
     }
 
-    public int getVelocity() {
+    public double getVelocity() {
         return velocity;
     }
 
@@ -21,7 +28,7 @@ public class Ant {
         this.velocity = velocity;
     }
 
-    public int getLocation() {
+    public double getLocation() {
         return location;
     }
 
@@ -39,7 +46,10 @@ public class Ant {
 
     //creep
     void creep(){
-        //todo 还没写完
+        if(this.hit == 1){
+            this.velocity *= (-1);
+        }
+        this.location = this.location + this.velocity*0.5;
     }
 }
 

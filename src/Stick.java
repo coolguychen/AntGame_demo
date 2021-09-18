@@ -12,7 +12,10 @@ public class Stick {
 
     //判断是否蚂蚁是否会掉下去
     boolean isOut(Ant ant){
-        //todo
-        return true;
+        double location = ant.getLocation();
+        if(location < 0 || location > 300){
+            return true;
+        }
+        return false;
     }
 }
