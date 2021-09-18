@@ -1,6 +1,10 @@
 public class Stick {
     int length;
 
+    public Stick(int length) {
+        this.length = length;
+    }
+
     //getter and setter
     public int getLength() {
         return length;

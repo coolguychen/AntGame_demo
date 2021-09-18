@@ -45,11 +45,11 @@ public class Ant {
     }
 
     //creep
-    void creep(){
+    void creep(double incTime){
         if(this.hit == 1){
             this.velocity *= (-1);
         }
-        this.location = this.location + this.velocity*0.5;
+        this.location = this.location + this.velocity*incTime;
     }
 }
 
