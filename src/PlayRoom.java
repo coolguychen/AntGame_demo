@@ -15,7 +15,6 @@ public class PlayRoom {
     }
 
    public void start(){
-        //todo
         //PlayRoom start a game
         /**
         在PlayRoom向CreepingGame中传入不同初始方向可能情况时，
@@ -28,6 +27,7 @@ public class PlayRoom {
 
         for(int i = 0; i<32; i++){
             CreepingGame creepingGame = new CreepingGame();
+            System.out.println("Playing CreepingGame"+i+"......");
             time = creepingGame.playGame(i,incTime);
             if(time >= max) max = time;
             else if(time < min) min = time;

@@ -8,7 +8,7 @@ public class CreepingGame {
 
 
     double playGame(int situation, double incTime){
-        //todo
+
         //initialize an ant list
         int location[] = {30,80,110,160,250};
 
@@ -38,13 +38,12 @@ public class CreepingGame {
     void drivingGame(double incTime){
         Stick stick = new Stick(300);
 
-        //todo
         //判断是否相撞，如果相撞，给蚂蚁置标志位
-        for(int i = 0; i<5;i++){
-            for(int j=i+1;j<5;j++){
-                if(isHit(antList.get(i),antList.get(j))){
+        for(int k = 0; k < antList.size()-1; k++){
+            for(int j = k+1; j < antList.size(); j++){
+                if(isHit(antList.get(k),antList.get(j))){
                     //if two ants hit
-                    antList.get(i).setHit(1);// is hit
+                    antList.get(k).setHit(1);// is hit
                     antList.get(j).setHit(1);
                 }
             }
@@ -60,16 +59,18 @@ public class CreepingGame {
         }
 
         for(int i=0;i<index.size();i++){
-            antList.remove(index.get(i));
+            int idx = index.get(i);
+            antList.remove(idx);
         }
 
         index.clear();
+        for(int j = 0; j < antList.size(); j++){
+            antList.get(j).setHit(0);
+        }
     }
 
     boolean isHit(Ant a1, Ant a2){
-        //todo
         //木杆上是否存在两只蚂蚁在同一位置
-
         return a1.getLocation() == a2.getLocation();
     }
 }

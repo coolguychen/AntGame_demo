@@ -5,7 +5,7 @@ public class Ant {
     int hit = 0;
 
     //constructor
-    public Ant(int id, int velocity, int location) {
+    public Ant(int id, double velocity, double location) {
         this.id = id;
         this.velocity = velocity;
         this.location = location;
