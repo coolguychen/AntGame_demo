@@ -19,7 +19,9 @@ public class CreepingGame {
             int v = situation%2;
             situation >>= 1;
 
-            Ant ant = new Ant(i,5,location[i]);
+            double velocity = 5;
+            if(v == 0) velocity *= -1;
+            Ant ant = new Ant(i,velocity,location[i]);
 
             antList.add(ant);
         }
