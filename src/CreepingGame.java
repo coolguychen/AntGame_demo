@@ -4,8 +4,6 @@ import java.util.List;
 public class CreepingGame {
 
     List<Ant> antList = new ArrayList<Ant>();
-    double runTime;
-
 
     double playGame(int situation, double incTime){
 
@@ -26,7 +24,7 @@ public class CreepingGame {
             antList.add(ant);
         }
 
-        runTime = 0;
+        double runTime = 0;
 
         while(!antList.isEmpty()){
             drivingGame(incTime);
