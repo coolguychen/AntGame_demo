@@ -1,23 +1,31 @@
 public class Stick {
-    int length;
+    static int begin, end;
 
-    public Stick(int length) {
-        this.length = length;
+    public Stick(int begin, int end) {
+        this.begin = begin;
+        this.end = end;
     }
 
-    //getter and setter
-    public int getLength() {
-        return length;
+    public int getBegin() {
+        return begin;
     }
 
-    public void setLength(int length) {
-        this.length = length;
+    public void setBegin(int begin) {
+        this.begin = begin;
+    }
+
+    public int getEnd() {
+        return end;
+    }
+
+    public void setEnd(int end) {
+        this.end = end;
     }
 
     //判断是否蚂蚁是否会掉下去
     boolean isOut(Ant ant){
         double location = ant.getLocation();
-        if(location <= 0 || location >= 300){
+        if(location <= begin || location >= end){
             return true;
         }
         return false;

@@ -4,11 +4,16 @@ import java.util.List;
 public class CreepingGame {
 
     List<Ant> antList = new ArrayList<Ant>();
+    double runTime;
+
+    public List<Ant> getAntList() {
+        return antList;
+    }
 
     double playGame(int situation, double incTime){
 
         //initialize an ant list
-        int location[] = {30,80,110,160,250};
+        int location[] = {Stick.begin+30,Stick.begin+80,Stick.begin+110,Stick.begin+160,Stick.begin+250};
 
         for(int i =0;i<5;i++){
             /**
@@ -34,7 +39,7 @@ public class CreepingGame {
     }
 
     void drivingGame(double incTime){
-        Stick stick = new Stick(300);
+        Stick stick = new Stick(140, 440);
 
         //判断是否相撞，如果相撞，给蚂蚁置标志位
         for(int k = 0; k < antList.size()-1; k++){
