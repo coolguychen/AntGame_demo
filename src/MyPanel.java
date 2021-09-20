@@ -3,6 +3,9 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 自定义JPanel用于绘图
+ */
 class MyPanel extends JPanel
 {
     //规定杆子在Panel中的坐标
