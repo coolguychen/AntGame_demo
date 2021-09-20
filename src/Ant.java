@@ -1,15 +1,21 @@
+import java.awt.*;
+
 public class Ant {
     int id;
     double velocity;
     double location;
     int hit = 0;
+    Color color;
 
     //constructor
-    public Ant(int id, double velocity, double location) {
+    public Ant(int id, double velocity, double location, Color color) {
         this.id = id;
         this.velocity = velocity;
         this.location = location;
+        this.color = color;
     }
+
+
 
     //setter and getter
     public int getId() {
@@ -42,6 +48,10 @@ public class Ant {
 
     public void setHit(int hit) {
         this.hit = hit;
+    }
+
+    public Color getColor() {
+        return color;
     }
 
     //creep
